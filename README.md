@@ -1,2 +1,2 @@
 # comp-oncology
-Example notebook for the recommended analysis for single cell cancer data
+Example notebook for the recommended analyses for single cell cancer data
