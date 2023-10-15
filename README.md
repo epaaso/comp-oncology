@@ -2,7 +2,7 @@
 Example notebook for the recommended analyses for single cell cancer data
 
 ## Pre-reqs
-We highly recommend using computer or server with cuda enabled.
+We highly recommend using a computer or server with cuda enabled.
 AAnother adavnatage would be to have dokcer installed with the cuda package
 for translating your cuda install to the contianers.
 
@@ -51,4 +51,4 @@ git config --global user.name "Ernesto Paas"
 ```
 
 We suggest saving a key pair, that can be generated with the command `ssh-keygen -t ed25519 -C "your_email@example.com".`
-in the folder that contains the repo
+in the folder that contains the repo, and then copying them to `~/.ssh/id_ed25519` etc
