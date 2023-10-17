@@ -1,13 +1,20 @@
 # Comp-oncology
-Example notebook for the recommended analyses for single cell cancer data
+Example notebook for the recommended analyses for single cell cancer data.
+We use the lung cancer data from [Laughney et. al](https://www.nature.com/articles/s41591-019-0750-6) for immune development
+in lung cancer.
 
 ## Pre-reqs
 We highly recommend using a computer or server with cuda enabled.
-AAnother adavnatage would be to have dokcer installed with the cuda package
-for translating your cuda install to the contianers.
+[Docker](https://docs.docker.com/engine/install/ubuntu/) must be a given to run the conatiners.
+Another advanatage would be to have docker installed with the cuda package
+for transfering your cuda install to the contianers.
 
-Nevertheless there is a list of the libraries and python and R packages at the end.
+Nevertheless, we added a list of the package versions for R and python in `requirements.txt`
+and `r_packages.txt`. Or you can base yourself on the commands in the Dockerfile if you 
+don't want to use docker.
 
+The notebook has commands to download the `.h5ad` file for scanpy. It contains the raw count matrix
+in `Anndata` form.
 
 ## Running
 
@@ -19,7 +26,7 @@ inserted as a volume. In the next command, `$HOME/2021-SC-HCA-LATAM/CONTAINER` i
 path of the repo, and the other one is where the large data files would be stored.
 
 ```
-docker run --interactive --runtime=nvidia --gpus all --tty --name comp_onco --publish 8888-8892:8888-8892 --volume $HOME/2021-SC-HCA-LATAM/CONTAINER:/root/host_home --volume /datos:/root/datos --workdir /root/host_home/ scarches /bin/bash
+docker run --interactive --runtime=nvidia --gpus all --tty --name comp_onco --publish 8888-8892:8888-8892 --volume $HOME/2021-SC-HCA-LATAM/CONTAINER:/root/host_home --volume /datos:/root/datos --workdir /root/host_home/ netopaas/comp-onco:paga /bin/bash
 ```
 
 We publish some ports to use the jupyter server.
