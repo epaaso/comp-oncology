@@ -42,6 +42,10 @@ RUN Rscript -e "BiocManager::install(c('sparseMatrixStats', 'SparseArray', 'Dela
 RUN Rscript -e "devtools::install_github('MatteoBlla/PsiNorm')"
 
 # Other pip packages
-RUN pip install triku==2.1.6 rpy2==3.5.14 anndata2ri==1.3.1 ikarus==0.0.3
+RUN pip install triku==2.1.6 rpy2==3.5.14 anndata2ri==1.3.1 ikarus==0.0.3 Cython==0.29.33
+WORKDIR ~
+RUN git clone https://github.com/cvanelteren/forceatlas2
+RUN cd forceatlas2 && echo "from forceatlas2 import *" >> fa2/__init__.py && pip install .
+
 
 RUN apt-get clean -y && apt-get autoremove -y
