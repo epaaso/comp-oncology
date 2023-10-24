@@ -36,16 +36,16 @@ After that just run the command `jl` inside the container and a jupyter lab serv
 
 ## Running in servers
 
-It is recommended to run the notebook in a server with lots of RAM. Another advantage of having a container is that
-you can run everything witout having sudo acces.
-If you are doing so, you can launch a reverse proxy to acces this sever from your computer with 
-a command like this:
+It is recommended to run the notebook on a server with lots of RAM.
+ Another advantage of having a container is that you can run everything without giving sudo access. 
+If you are doing so, you can launch a reverse proxy to access this server from 
+your computer with a command like this:
 
 ```bash
 ssh -p 5265 -N -f -L 5432:localhost:8888 sefirot.inmegen.gob.mx
 ```
 
-This forwards the port 8888 in the server to 5432 in your localhost. The -p is for when the ssh port on your server is different than the default.
+This forwards the port 8888 in the server to 5432 in your localhost. The -p is for when the ssh port on your server is different from the default.
 
 
 ## Troubleshooting
@@ -57,5 +57,5 @@ git config --global user.email ernesto.paas@ciencias.unam.mx
 git config --global user.name "Ernesto Paas"
 ```
 
-We suggest saving a key pair, that can be generated with the command `ssh-keygen -t ed25519 -C "your_email@example.com".`
+We suggest saving a key pair that can be generated with the command `ssh-keygen -t ed25519 -C "your_email@example.com".`
 in the folder that contains the repo, and then copying them to `~/.ssh/id_ed25519` etc.
