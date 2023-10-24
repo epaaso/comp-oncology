@@ -5,8 +5,8 @@ in lung cancer.
 
 ## Pre-reqs
 We highly recommend using a computer or server with cuda enabled.
-[Docker](https://docs.docker.com/engine/install/ubuntu/) must be a given to run the conatiners.
-Another advanatage would be to have docker installed with the cuda package
+[Docker](https://docs.docker.com/engine/install/ubuntu/) must be a given to run the containers.
+Another advantage would be to have docker installed with the cuda package
 for transfering your cuda install to the contianers.
 
 Nevertheless, we added a list of the package versions for R and python in `requirements.txt`
@@ -19,7 +19,7 @@ in `Anndata` form.
 ## Running
 
 We have designed a docker image that has all the necessary libs. It is however very big, because it has 
-all the R and python pacages including the ones for ML.
+all the R and python packages including the ones for ML.
 
 To be able to run the notebook, you should run the container with this notebook repo
 inserted as a volume. In the next command, `$HOME/2021-SC-HCA-LATAM/CONTAINER` is the
@@ -32,13 +32,13 @@ docker run --interactive --runtime=nvidia --gpus all --tty --name comp_onco --pu
 We publish some ports to use the jupyter server.
 
 
-After that just run the command `jl` and a jupyter lab server will be launched.
+After that just run the command `jl` inside the container and a jupyter lab server will be launched.
 
 ## Running in servers
 
-It is recommended to run the notebook in a server with much RAM. Another advantage of having a container is that
+It is recommended to run the notebook in a server with lots of RAM. Another advantage of having a container is that
 you can run everything witout having sudo acces.
-If you are doing so you can do a reverse proxy to acces this sever from your computer with 
+If you are doing so, you can launch a reverse proxy to acces this sever from your computer with 
 a command like this:
 
 ```bash
@@ -58,4 +58,4 @@ git config --global user.name "Ernesto Paas"
 ```
 
 We suggest saving a key pair, that can be generated with the command `ssh-keygen -t ed25519 -C "your_email@example.com".`
-in the folder that contains the repo, and then copying them to `~/.ssh/id_ed25519` etc
+in the folder that contains the repo, and then copying them to `~/.ssh/id_ed25519` etc.
