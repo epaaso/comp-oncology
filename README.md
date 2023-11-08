@@ -7,7 +7,7 @@ in lung cancer.
 We highly recommend using a computer or server with cuda enabled.
 [Docker](https://docs.docker.com/engine/install/ubuntu/) must be a given to run the containers.
 Another advantage would be to have docker installed with the cuda package
-for transfering your cuda install to the contianers.
+for transfering your cuda install to the containers.
 
 Nevertheless, we added a list of the package versions for R and python in `requirements.txt`
 and `r_packages.txt`. Or you can base yourself on the commands in the Dockerfile if you 
