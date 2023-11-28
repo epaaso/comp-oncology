@@ -18,8 +18,8 @@ def run_surgery_process(adata: ad.AnnData, name: str, batch_key: str = 'sample',
                         ref_model_dir_prefix: str = '/root/datos/maestria/netopaas/lung_scRNA/HCA_Lung/',
                         surgery_epochs: int = 350,
                         surgery_save=False,
-                        uncertainty_threshold = 0.2,
-                        n_neighbors = 30, # This uncertainty threshold limits the false positive rate to <0.5 (as per Sikkema et al., bioRxiv 2022)
+                        uncertainty_threshold = 0.2, # This uncertainty threshold limits the false positive rate to <0.5 (as per Sikkema et al., bioRxiv 2022)
+                        n_neighbors = 30, 
                         early_stopping_kwargs_surgery: dict = None) -> ad.AnnData:
     """
     Process the given AnnData object using a surgical method based on provided parameters.
